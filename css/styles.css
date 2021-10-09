@@ -525,7 +525,7 @@ body {
 .social-network-header {
   font-weight: bold;
   font-size: 14px;
-  line-height: calc(16px / 14px);
+  line-height: calc(16 / 14);
   text-transform: uppercase;
   color: var(--primery-title-color);
   margin-bottom: 20px;
@@ -651,8 +651,32 @@ body {
   margin-bottom: 0;
 }
 
+.portfolio-imagine-text {
+  position: relative;
+  overflow: hidden;
+}
+
 .portfolio-imagine {
   margin-bottom: 20px;
+}
+
+.imagine-description {
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  color: var(--third-text-color);
+  background-color: var(--accent-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+}
+
+.portfolio-item-img:hover .imagine-description {
+  transform: translateY(0);
+  background: rgba(33, 150, 243, 0.9);
 }
 
 .portfolio-title {
